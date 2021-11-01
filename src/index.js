@@ -1,3 +1,4 @@
+import "./styles.css"
 //elements
 const inputById= document.getElementById('inputById');
 const searchByIdButton = document.getElementById('searchByIdButton');
@@ -21,7 +22,7 @@ let username = undefined;
 //main functions
 const getPokemonById = async (Id) => {  //fetching data from api
     try {
-        const response = await axios.get(`http://localhost:3000/pokemon/get/${Id}`, 
+        const response = await axios.get(`https://omer-poke-web.herokuapp.com/pokemon/get/${Id}`, 
         {headers:{"username": username}});
         if(response.data.name ===undefined){ //in case someone doesnt enter a value
             throw('error') 
@@ -175,7 +176,7 @@ signInBtn.addEventListener('click',signInSectChange)
 catchBtn.addEventListener('click', async (e)=>{
     try {
         const pokeId= byIdID.textContent
-        const res= await axios.put(`http://localhost:3000/pokemon/catch/${pokeId}`, 
+        const res= await axios.put(`https://omer-poke-web.herokuapp.com/pokemon/catch/${pokeId}`, 
         {body: {}},{headers:{"username": username}}); 
         showemAll(); 
         clearErrMsg();  
@@ -189,7 +190,7 @@ catchBtn.addEventListener('click', async (e)=>{
 releaseBtn.addEventListener('click',async (e)=>{
     try {
         const pokeId= byIdID.textContent
-        await axios.delete(`http://localhost:3000/pokemon/release/${pokeId}`, 
+        await axios.delete(`https://omer-poke-web.herokuapp.com/pokemon/release/${pokeId}`, 
         {headers:{"username": username}},{body: {}});
         showemAll()
         clearErrMsg()
@@ -227,7 +228,7 @@ function signInSectChange(){
 async function showemAll(){
     try {
         resetPokeList();
-        const response = await axios.get(`http://localhost:3000/pokemon/`, 
+        const response = await axios.get(`https://omer-poke-web.herokuapp.com/pokemon/`, 
         {headers:{"username": username}});
         const pokeArr = response.data
         for(let pokemon of pokeArr){
