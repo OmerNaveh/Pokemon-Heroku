@@ -19,9 +19,9 @@ app.listen(port, function() {
 
 app.use(cors()) // solves chrome issue
 
-app.use(express.static(path.join(__dirname, '../dist')))
+app.use(express.static(path.join(__dirname, './dist')))
 app.get("/", (req,res)=>{
-  res.sendFile("../dist/index.html", {root: __dirname})
+  res.sendFile("./dist/index.html", {root: __dirname})
 })
 // route our app
 app.use(userHandler)
