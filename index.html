@@ -21,6 +21,11 @@
   <div class="searchIdResults">
     <label id="idSearchHeading">Pokemon Info:</label>
     <ul id="pokemonDet" class="list-group w-50 showIdResults">
+      <span id="catchreleaseSect">
+      <button id='catchBtn' class="btn catchRelease">Catch</button>
+      <button id='releaseBtn' class="btn catchRelease"> Release</button>
+      </span>
+      <li class="li-Det"> <label id="byIdID">ID: </label></li>
       <li class="li-Det"> <label id="byIdName">Name: </label></li>
       <li class="li-Det"> <label id="byIdHeight">Height: </label></li>
       <li class="li-Det"> <label id="byIdWeight">Weight: </label></li>
@@ -31,7 +36,13 @@
       </li>
     </ul>
   </div>  
-    
+  <section class="signInSect">
+    <input id="userNameInput" class="userNameInput" placeholder="Enter username">
+    <button id="signInBtn" class="signInBtn">Sign In</button>
+  </section>
+  <section id="gottaCatchEmSect"class='gottaCatchEm'>
+    <label class="li-Det"> gotta Catch Em All</label>
+  </section>
 </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

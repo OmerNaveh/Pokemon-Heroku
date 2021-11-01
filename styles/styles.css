@@ -44,4 +44,49 @@ body{
 .reloadBtn{
     width: 50%;
 }
-
+.signInSect{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.userNameInput{
+    background-color: lightcoral;
+    border: solid 2px black;
+}
+.welcomeLabel{
+    color: gold;
+    font-weight: bold;
+    font-size: 20px;
+}
+.signInBtn{
+    background-color: lightgreen;
+}
+.signOutBtn{
+    background-color: lightsalmon;
+}
+.gottaCatchEm{
+    position: absolute;
+    right: 3rem;
+    top : 4rem;
+}
+.pokeList{
+    list-style: none;
+    text-align: center;
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pokeList:hover{
+    cursor: pointer;
+}
+.catchRelease{
+    width: 200px;
+}
+.errorMsg{
+    position: absolute;
+    color: whitesmoke;
+    background-color: darkred;
+    border: solid 1px black;
+    top: 150px;
+    right: 470px;
+}
