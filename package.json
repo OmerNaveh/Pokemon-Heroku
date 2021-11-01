@@ -33,6 +33,9 @@
     "webpack-dev-server": "3.8.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pokedex-promise-v2": "^3.3.2",
     "@babel/runtime": "^7.16.0",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.1.3",
